@@ -45,7 +45,7 @@ public class UserController {
                     );
             return ResponseEntity.badRequest().body(errors);
         }else{
-            if(repository.findByEmail(user.getName()) == null) {
+            if(repository.findByEmail(user.getEmail()) == null) {
                 repository.insert(new User(user.getId(), user.getName(), user.getEmail()));
                 resp.setCodeStatus("1");
                 resp.setMessage("The user was succesfully created!");

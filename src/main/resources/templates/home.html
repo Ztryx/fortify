@@ -4,54 +4,50 @@
 <head>
     <title>Getting Started: Handling Form Submission</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-    <style type="text/css">
-        span.error{
-            color: red;
-            margin-left: 5px;
-        }
-    </style>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" th:src="@{js/ajaxController.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
 </head>
 <body>
-<h1>Form</h1>
-<form action="newUser" method="post" name="employeeForm">
-    <table>
-        <tr>
-            <td>Name</td>
-            <td><input name="name" type="text" /></td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td><input name="email" type="email" /></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button type="submit">Submit</button></td>
-        </tr>
-    </table>
-</form>
-
-<!-- Result Container  -->
-<div id="resultContainer">
-    <table id="myTable" dt:table="true">
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="user : ${users}">
-            <td th:text="${user?.id}"></td>
-            <td th:text="${user?.name}"></td>
-            <td th:text="${user?.email}"></td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+    <div class="d-flex align-items-center flex-column">
+        <div class="mb-auto p-2" style="margin-top: 50px;">
+            <h1>Newsletter Email Registration</h1>
+        </div>
+        <div class="p-2" style="margin: 30px auto;">
+            <form action="newUser" method="post" name="employeeForm">
+                <div class="d-flex align-items-center flex-column">
+                    <div class="mb-auto p-2">
+                        <input name="name" type="text" placeholder="Name"/>
+                    </div>
+                    <div class="p-2">
+                        <input name="email" type="email" placeholder="Email"/>
+                    </div>
+                    <div class="p-2">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="p-2">
+            <div id="resultContainer">
+                <table id="myTable" dt:table="true" class="table">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="user : ${users}">
+                        <td th:text="${user?.id}"></td>
+                        <td th:text="${user?.name}"></td>
+                        <td th:text="${user?.email}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

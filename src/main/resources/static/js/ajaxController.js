@@ -45,9 +45,6 @@ $(function() {
             default:
                 break;
         }
-
-        //Remove all errors
-        $('input').next().remove();
     });
 
     function checkGeneral() {
