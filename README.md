@@ -1,5 +1,4 @@
 <h1>Fortify Newsletter Exercise</h1>
-    The first one, explaining the rules of the game and giving the chance to navigate to the game or the ranking on server side: <br/>
 <h2>Dependencies</h2>
 <p> Dependencies are managed by Maven in this project. <br/>
     Here there is the list of the tools and version I have used in order to build the project: </p>
