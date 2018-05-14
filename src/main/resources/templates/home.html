@@ -7,6 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" th:src="@{js/ajaxController.js}"></script>
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/own-theme.css}"/>
 </head>
 <body>
     <div class="d-flex align-items-center flex-column">
@@ -14,7 +15,7 @@
             <h1>Newsletter Email Registration</h1>
         </div>
         <div class="p-2" style="margin: 30px auto;">
-            <form action="newUser" method="post" name="employeeForm">
+            <form action="newUser" method="post" name="employeeForm" class="form-class">
                 <div class="d-flex align-items-center flex-column">
                     <div class="mb-auto p-2">
                         <input name="name" type="text" placeholder="Name"/>

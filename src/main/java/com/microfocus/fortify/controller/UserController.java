@@ -24,7 +24,7 @@ public class UserController {
     @Autowired
     UserJdbcRepository repository;
 
-    @RequestMapping(value="/home", method=RequestMethod.GET)
+    @RequestMapping(value="/", method=RequestMethod.GET)
     public String greetingForm(Model model) {
         model.addAttribute("home", new User());
         model.addAttribute("users", repository.findAll());
