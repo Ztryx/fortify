@@ -14,4 +14,4 @@
   </li>
 </ul>
 <h2>Deployment</h2>
-<p> This project has been tested with <b>Spring Boot</b> (local server).</p>
+<p> This project has been tested with <b>Spring Boot</b> (Tomcat local server).</p>
