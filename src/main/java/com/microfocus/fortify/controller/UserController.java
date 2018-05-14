@@ -43,7 +43,7 @@ public class UserController {
                     .collect(
                             Collectors.toMap(FieldError::getField, FieldError::getDefaultMessage)
                     );
-            return ResponseEntity.badRequest().body(result);
+            return ResponseEntity.badRequest().body(errors);
         }else{
             if(repository.findByEmail(user.getName()) == null) {
                 repository.insert(new User(user.getId(), user.getName(), user.getEmail()));
