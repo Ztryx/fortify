@@ -2,7 +2,6 @@ package com.microfocus.fortify.utils;
 
 import com.microfocus.fortify.model.User;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
